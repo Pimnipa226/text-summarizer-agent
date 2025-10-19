@@ -1,0 +1,40 @@
+modules:
+  rovo:agent:
+    - key: text-summarizer-agent
+      name: Text Summarizer Agent
+      description: An agent that creates concise summaries of user-provided text.
+      prompt: >
+        You are an intelligent summarization agent. 
+        When the user provides a piece of text, generate a clear and concise summary 
+        that captures the main ideas while preserving important details.
+
+        If the user hasn’t provided any text yet, politely ask them to input the text they want summarized.
+      conversationStarters:
+        - Summarize my text
+      actions:
+        - summarize-text
+
+  action:
+    - key: summarize-text
+      name: Summarize Text
+      function: textSummarizer
+      actionVerb: CREATE
+      description: >
+        Takes a user-provided text and generates a concise summary.
+      inputs:
+        text:
+          title: Text to Summarize
+          type: string
+          required: true
+          description: |
+            The text that the user wants summarized.
+
+  function:
+    - key: textSummarizer
+      handler: index.textSummarizer
+
+app:
+  runtime:
+    name: nodejs20.x
+  id: ari:cloud:ecosystem::app/42aa98f0-9877-4ff8-9d6e-2afa865b467e
+
