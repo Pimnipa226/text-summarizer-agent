@@ -1,3 +1,5 @@
+# Text-Summarizer-Using-Rovo-AI-Agent
+
 ## Inspiration
 As university students, we must stay organized to handle schoolwork, extracurriculars, part-time jobs, and other responsibilities. For this, many of us rely on productivity tools like Confluence and Jira from Atlassian. As life gets busy, it’s easy to miss critical tasks, so we wanted to create a tool to solve this issue. We specifically wanted to help teams working on projects together ensure they do not miss important action items as they plan out next steps during team meetings.
 
